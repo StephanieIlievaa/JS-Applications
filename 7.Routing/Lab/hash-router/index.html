@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Router</title>
+</head>
+<body>
+    <h1>Hash Based Router</h1>
+    <h2>Home</h2>
+
+    <nav> 
+        <a href="#products">Products</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about-us">About</a>
+    </nav>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus corporis ab dolore! Laborum doloremque, similique eos doloribus excepturi exercitationem aut!</p>
+   <script>
+       const routes = {
+           '#products': () => `<div> 
+            <h2>Products Page</h2>
+            <p>Some products here</p>
+            </div?>`,
+
+            '#pricing': () => `<div> 
+            <h2>Pricing Page Page</h2>
+            <p>Our prices</p>
+            </div?>`,
+            '#about-us': () => `<div> 
+            <h2>About us Page</h2>
+            <p>About us info</p>
+            </div?>`
+       }
+       window.addEventListener('hashchange', (e) => {
+      console.log(location.hash); })
+   </script> 
+</body>
+</html>
